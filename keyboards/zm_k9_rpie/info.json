@@ -1,0 +1,88 @@
+{
+  "manufacturer": "ziddymakes",
+  "keyboard_name": "ZM-9K_RPIE",
+  "url": "shop.ziddymakes.com",
+  "maintainer": "ziddymakes",
+  "processor": "RP2040",
+  "bootloader": "rp2040",
+  "board": "GENERIC_RP_RP2040",
+  "usb": {
+      "device_version": "2.0.4",
+      "pid": "0x7549",
+      "vid": "0x4879"
+  },
+  "features": {
+      "audio": false,
+      "backlight": false,
+      "bootmagic": true,
+      "command": false,
+      "console": false,
+      "encoder": true,
+      "extrakey": true,
+      "mousekey": true,
+      "midi": true,
+      "nkro": false,
+      "rgb_matrix": false,
+      "rgblight": true
+  },
+  "ws2812": {
+    "driver": "vendor",
+    "pin": "GP0"
+  },
+  "rgblight": {
+    "driver": "ws2812",
+    "saturation_steps": 8,
+    "brightness_steps": 8,
+    "led_count": 9,
+    "max_brightness": 255,
+    "sleep": true,
+    "animations": {
+        "breathing": true,
+        "rainbow_mood": true,
+        "rainbow_swirl": true,
+        "snake": true,
+        "knight": true,
+        "christmas": true,
+        "static_gradient": true,
+        "rgb_test": true,
+        "alternating": true
+    },
+    "default":{
+        "animation": "rainbow_swirl",
+        "val": 150,
+        "speed": 3
+    }
+  },
+  "matrix_pins": {
+      "direct": [
+        ["GP1", "GP2", "GP3"],
+        ["GP4", "GP5", "GP6"],
+        ["GP7", "GP8", "GP9"],
+        ["GP21", null, null ]
+    ]
+  },
+  "encoder": {
+    "rotary": [
+        {"pin_a": "GP19", "pin_b": "GP20"}
+    ]
+  },
+  "layouts": {
+      "LAYOUT_zm_k9": {
+          "layout": [
+              {"matrix": [0, 0], "x": 0, "y": 0},
+              {"matrix": [0, 1], "x": 1, "y": 0},
+              {"matrix": [0, 2], "x": 2, "y": 0},
+
+              {"matrix": [1, 0], "x": 0, "y": 1},
+              {"matrix": [1, 1], "x": 1, "y": 1},
+              {"matrix": [1, 2], "x": 2, "y": 1},
+
+              {"matrix": [2, 0], "x": 0, "y": 2},
+              {"matrix": [2, 1], "x": 1, "y": 2},
+              {"matrix": [2, 2], "x": 2, "y": 2},
+
+              {"matrix": [3, 0], "x": 0, "y": 0}
+          ]
+      }
+  }
+}
